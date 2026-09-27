@@ -18,7 +18,7 @@ The transaction risk logic evaluates multiple transaction-level factors, includi
 
 A transaction is classified as `HIGH_RISK` when it meets one of the following conditions:
 
-- `is_night_transaction = 1` AND `amount > 3,000 PLN`
+- `is_night_transaction = 1` AND `amount > 3,000 transaction value`
 - `merchant_category IN (Crypto, Gambling)` AND `status = DECLINED`
 
 The logic was implemented in Excel using `IF`, `AND`, and `OR` functions.
@@ -112,11 +112,11 @@ A dedicated Key Insights section highlights the most relevant findings from the 
 ### Transaction Priority and Financial Exposure
 
 - HIGH and URGENT transactions represented 30.5% of total transaction volume but accounted for approximately 50.5% of total transaction value.
-- URGENT transactions represented 10.5% of transaction volume and accounted for 186,174 PLN of transaction value.
+- URGENT transactions represented 10.5% of transaction volume and accounted for 186,174 transaction value of transaction value.
 
 ### Channel Analysis
 
-- ONLINE generated the highest HIGH_RISK transaction value, at 224,820 PLN.
+- ONLINE generated the highest HIGH_RISK transaction value, at 224,820 transaction value.
 - The channel analysis indicates that risk exposure should be evaluated not only by transaction count but also by financial value.
 
 ### Customer & Operational Analysis
